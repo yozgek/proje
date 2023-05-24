@@ -15,11 +15,36 @@ namespace Eczane
             ConnectionString MyConnection = new ConnectionString();
             SqlConnection baglanti = MyConnection.GetCon();
             SqlCommand komut = new SqlCommand();
-          komut.Connection = baglanti;
+            komut.Connection = baglanti;
             baglanti.Open();
             komut.CommandText = query;
             komut.ExecuteNonQuery();
             baglanti.Close();
+        }
+        public void HastaSil(string query)
+        {
+            ConnectionString MyConnection = new ConnectionString();
+            SqlConnection baglanti = MyConnection.GetCon();
+            SqlCommand komut = new SqlCommand();
+            komut.Connection = baglanti;
+            baglanti.Open();
+            komut.CommandText = query;
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+
+        }
+        public void HastaGüncelle(string query)
+        {
+            ConnectionString MyConnection = new ConnectionString();
+            SqlConnection baglanti = MyConnection.GetCon();
+            SqlCommand komut = new SqlCommand();
+            komut.Connection = baglanti;
+            baglanti.Open();
+            komut.CommandText = query;
+            int v = komut.ExecuteNonQuery();
+            _ = v;
+            baglanti.Close();
+
         }
         public DataSet ShowHasta(string query)
         {

@@ -1,4 +1,7 @@
 ﻿
+using System;
+using System.Windows.Forms;
+
 namespace Eczane
 {
     partial class Hasta
@@ -52,7 +55,7 @@ namespace Eczane
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.HastaDGV = new System.Windows.Forms.DataGridView();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -62,7 +65,7 @@ namespace Eczane
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +117,7 @@ namespace Eczane
             this.label4.Size = new System.Drawing.Size(406, 35);
             this.label4.TabIndex = 4;
             this.label4.Text = "     KONYA DENTAL KLİNİK     ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox2
             // 
@@ -199,13 +203,13 @@ namespace Eczane
             this.HDogumTarihi.CalendarMonthBackground = System.Drawing.Color.Ivory;
             this.HDogumTarihi.CalendarTitleBackColor = System.Drawing.Color.Ivory;
             this.HDogumTarihi.CalendarTrailingForeColor = System.Drawing.Color.Ivory;
-            this.HDogumTarihi.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.HDogumTarihi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.HDogumTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.HDogumTarihi.Location = new System.Drawing.Point(175, 283);
             this.HDogumTarihi.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.HDogumTarihi.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.HDogumTarihi.Name = "HDogumTarihi";
-            this.HDogumTarihi.Size = new System.Drawing.Size(210, 32);
+            this.HDogumTarihi.Size = new System.Drawing.Size(210, 29);
             this.HDogumTarihi.TabIndex = 10;
             // 
             // label6
@@ -221,12 +225,13 @@ namespace Eczane
             // 
             // HCinsiyetCb
             // 
+            this.HCinsiyetCb.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.HCinsiyetCb.BackColor = System.Drawing.Color.Ivory;
             this.HCinsiyetCb.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.HCinsiyetCb.FormattingEnabled = true;
             this.HCinsiyetCb.Items.AddRange(new object[] {
-            "KADIN ",
-            "ERKEK"});
+            "Kadin ",
+            "Erkek"});
             this.HCinsiyetCb.Location = new System.Drawing.Point(175, 327);
             this.HCinsiyetCb.Name = "HCinsiyetCb";
             this.HCinsiyetCb.Size = new System.Drawing.Size(210, 29);
@@ -288,6 +293,7 @@ namespace Eczane
             this.button1.TabIndex = 17;
             this.button1.Text = "SİL";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -301,6 +307,7 @@ namespace Eczane
             this.button2.TabIndex = 18;
             this.button2.Text = "GÜNCELLE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -316,19 +323,23 @@ namespace Eczane
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataGridView1
+            // HastaDGV
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(427, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 247);
-            this.dataGridView1.TabIndex = 20;
+            this.HastaDGV.BackgroundColor = System.Drawing.Color.Bisque;
+            this.HastaDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.HastaDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HastaDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.HastaDGV.Location = new System.Drawing.Point(427, 195);
+            this.HastaDGV.Name = "HastaDGV";
+            this.HastaDGV.Size = new System.Drawing.Size(457, 247);
+            this.HastaDGV.TabIndex = 20;
+            this.HastaDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellClick);
+            this.HastaDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellContentClick);
             // 
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.Ivory;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox5.ForeColor = System.Drawing.SystemColors.MenuText;
             this.textBox5.Location = new System.Drawing.Point(450, 146);
             this.textBox5.Multiline = true;
@@ -381,7 +392,7 @@ namespace Eczane
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.HastaDGV);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -402,17 +413,28 @@ namespace Eczane
             this.Name = "Hasta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hasta";
+            this.Load += new System.EventHandler(this.Hasta_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1BindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void HastaDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -438,7 +460,7 @@ namespace Eczane
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView HastaDGV;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;

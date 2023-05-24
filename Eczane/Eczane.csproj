@@ -83,6 +83,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>disciklinikDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="disciklinikDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>disciklinikDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +181,18 @@
     <None Include="disciklinikDataSet.xss">
       <DependentUpon>disciklinikDataSet.xsd</DependentUpon>
     </None>
+    <None Include="disciklinikDataSet1.xsc">
+      <DependentUpon>disciklinikDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="disciklinikDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>disciklinikDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="disciklinikDataSet1.xss">
+      <DependentUpon>disciklinikDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\Hasta.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -216,6 +233,9 @@
       <ProductName>.NET Framework 3.5 SP1 </ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
