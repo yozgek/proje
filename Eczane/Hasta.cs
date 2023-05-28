@@ -36,6 +36,7 @@ namespace Eczane
                 Hs.HastaEkle(query);
                 MessageBox.Show("Hasta Başarıyla Eklendi");
                 uyeler();
+                Reset();
 
 
 
@@ -58,13 +59,31 @@ namespace Eczane
                 DataSet ds = Hs.ShowHasta(query);
                 HastaDGV.DataSource = ds.Tables[0];     
         }
+        void filter()
+        {
+            Hastalar Hs = new Hastalar();
+            string query = "select * from HastaTbl where HastaAd like '%" + AraTb.Text + "%'";
+            DataSet ds = Hs.ShowHasta(query);
+            HastaDGV.DataSource = ds.Tables[0];
+        }
+        void Reset()
+        {
+            HAdSoyadTb.Text = "";
+            HTelefonTb.Text = "";
+            HDogumTarihi.Text = "";
+            HCinsiyetCb.SelectedItem = "";
+            AlerjiTb.Text = "";
+            AdresTb.Text = "";
+        }
+
 
         private void Hasta_Load(object sender, EventArgs e)
         {
             uyeler();
+            Reset();
 
-        }
-        int key=0;
+        } int key = 0;
+
 
         private void HastaDGV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -74,16 +93,19 @@ namespace Eczane
             HCinsiyetCb.SelectedItem = HastaDGV.SelectedRows[0].Cells[4].Value.ToString();
             AlerjiTb.Text = HastaDGV.SelectedRows[0].Cells[5].Value.ToString();
             AdresTb.Text = HastaDGV.SelectedRows[0].Cells[6].Value.ToString();
-            if (HAdSoyadTb.Text=="")
+            if (HAdSoyadTb.Text == "")
             {
-                key=0;
-            }else
+                key = 0;
+            }
+            else
             {
-                key=Convert.ToInt32(HastaDGV.SelectedRows[0].Cells[0].Value.ToString());
+                key = Convert.ToInt32(HastaDGV.SelectedRows[0].Cells[0].Value.ToString());
             }
 
 
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -101,6 +123,7 @@ namespace Eczane
                     Hs.HastaSil(query);
                     MessageBox.Show("Hasta Başarıyla Silindi");
                     uyeler();
+                    Reset();
 
 
 
@@ -132,6 +155,7 @@ namespace Eczane
                     Hs.HastaGüncelle(query);
                     MessageBox.Show("Hasta Başarıyla Güncellendi");
                     uyeler();
+                    Reset();
 
 
 
@@ -142,6 +166,44 @@ namespace Eczane
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Anasayfa ana = new Anasayfa();
+            ana.Show();
+            this.Hide();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Randevu rnd = new Randevu();
+            rnd.Show();
+            this.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Tedavi tdv = new Tedavi();
+            tdv.Show();
+            this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Reçete rct = new Reçete();
+            rct.Show();
+            this.Hide();
+        }
+
+        private void HastaDGV_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void AraTb_TextChanged(object sender, EventArgs e)
+        {
+            filter();
         }
     }
 }

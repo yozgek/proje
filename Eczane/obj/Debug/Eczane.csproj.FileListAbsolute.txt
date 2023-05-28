@@ -17,3 +17,4 @@ C:\Users\ismet\source\repos\Eczane\Eczane\obj\Debug\Eczane.Hasta.resources
 C:\Users\ismet\source\repos\Eczane\Eczane\obj\Debug\Eczane.Randevu.resources
 C:\Users\ismet\source\repos\Eczane\Eczane\obj\Debug\Eczane.Reçete.resources
 C:\Users\ismet\source\repos\Eczane\Eczane\obj\Debug\Eczane.Tedavi.resources
+C:\Users\ismet\source\repos\Eczane\Eczane\obj\Debug\Eczane.Form2.resources

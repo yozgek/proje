@@ -36,10 +36,15 @@ namespace Eczane
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hasta));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.HAdSoyadTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.HTelefonTb = new System.Windows.Forms.TextBox();
@@ -55,19 +60,17 @@ namespace Eczane
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.HastaDGV = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.AraTb = new System.Windows.Forms.TextBox();
             this.dentaldbDataSet1 = new Eczane.dentaldbDataSet1();
             this.dentaldbDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.HastaDGV = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,14 +87,84 @@ namespace Eczane
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 94);
             this.panel2.TabIndex = 3;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.Location = new System.Drawing.Point(110, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 24);
+            this.label9.TabIndex = 94;
+            this.label9.Text = "<<<";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.BurlyWood;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button6.Location = new System.Drawing.Point(355, 27);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 40);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "RANDEVU";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.BurlyWood;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button7.Location = new System.Drawing.Point(720, 27);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(119, 40);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "REÇETE";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.BurlyWood;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button8.Location = new System.Drawing.Point(538, 27);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(123, 40);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "TEDAVİ";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(171, 27);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(125, 40);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "HASTA";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -106,26 +179,13 @@ namespace Eczane
             this.label1.Text = "X";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label4.Location = new System.Drawing.Point(281, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(406, 35);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "     KONYA DENTAL KLİNİK     ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 91);
+            this.pictureBox2.Size = new System.Drawing.Size(71, 91);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -140,6 +200,19 @@ namespace Eczane
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.label4.Location = new System.Drawing.Point(254, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(406, 35);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "     KONYA DENTAL KLİNİK     ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // HAdSoyadTb
             // 
@@ -323,55 +396,17 @@ namespace Eczane
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // HastaDGV
+            // AraTb
             // 
-            this.HastaDGV.BackgroundColor = System.Drawing.Color.Bisque;
-            this.HastaDGV.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.HastaDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HastaDGV.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.HastaDGV.Location = new System.Drawing.Point(427, 195);
-            this.HastaDGV.Name = "HastaDGV";
-            this.HastaDGV.Size = new System.Drawing.Size(457, 247);
-            this.HastaDGV.TabIndex = 20;
-            this.HastaDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellClick);
-            this.HastaDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellContentClick);
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Ivory;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.textBox5.Location = new System.Drawing.Point(450, 146);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(210, 32);
-            this.textBox5.TabIndex = 21;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Linen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button4.Location = new System.Drawing.Point(666, 146);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 32);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "ARA";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Linen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button5.Location = new System.Drawing.Point(745, 146);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 32);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "YENİLE";
-            this.button5.UseVisualStyleBackColor = false;
+            this.AraTb.BackColor = System.Drawing.Color.Ivory;
+            this.AraTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.AraTb.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.AraTb.Location = new System.Drawing.Point(506, 157);
+            this.AraTb.Multiline = true;
+            this.AraTb.Name = "AraTb";
+            this.AraTb.Size = new System.Drawing.Size(291, 32);
+            this.AraTb.TabIndex = 21;
+            this.AraTb.TextChanged += new System.EventHandler(this.AraTb_TextChanged);
             // 
             // dentaldbDataSet1
             // 
@@ -383,16 +418,28 @@ namespace Eczane
             this.dentaldbDataSet1BindingSource.DataSource = this.dentaldbDataSet1;
             this.dentaldbDataSet1BindingSource.Position = 0;
             // 
+            // HastaDGV
+            // 
+            this.HastaDGV.BackgroundColor = System.Drawing.Color.Bisque;
+            this.HastaDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HastaDGV.Location = new System.Drawing.Point(416, 195);
+            this.HastaDGV.Name = "HastaDGV";
+            this.HastaDGV.Size = new System.Drawing.Size(478, 247);
+            this.HastaDGV.TabIndex = 40;
+            this.HastaDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellClick);
+            this.HastaDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.HastaDGV_CellContentClick_1);
+            // 
             // Hasta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(931, 604);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.HastaDGV);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.AraTb);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -419,9 +466,9 @@ namespace Eczane
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dentaldbDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HastaDGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -460,11 +507,14 @@ namespace Eczane
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView HastaDGV;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox AraTb;
         private System.Windows.Forms.BindingSource dentaldbDataSet1BindingSource;
         private dentaldbDataSet1 dentaldbDataSet1;
+        private DataGridView HastaDGV;
+        private Button button6;
+        private Button button7;
+        private Button button8;
+        private Button button9;
+        private Label label9;
     }
 }
