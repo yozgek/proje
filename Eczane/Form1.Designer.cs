@@ -73,6 +73,7 @@ namespace Eczane
             this.label5.Size = new System.Drawing.Size(27, 28);
             this.label5.TabIndex = 6;
             this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pictureBox1
             // 
@@ -169,7 +170,7 @@ namespace Eczane
             this.label4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.Bisque;
-            this.label4.Location = new System.Drawing.Point(179, 123);
+            this.label4.Location = new System.Drawing.Point(179, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(336, 35);
             this.label4.TabIndex = 2;
