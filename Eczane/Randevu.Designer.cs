@@ -30,75 +30,42 @@ namespace Eczane
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Randevu));
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.RandevuDGV = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.Rtarih = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.RadCb = new System.Windows.Forms.ComboBox();
+            this.RtedaviCb = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SaatCb = new System.Windows.Forms.ComboBox();
+            this.AraaTb = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RandevuDGV)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // RandevuDGV
             // 
-            this.button5.BackColor = System.Drawing.Color.Linen;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button5.Location = new System.Drawing.Point(751, 154);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(94, 32);
-            this.button5.TabIndex = 42;
-            this.button5.Text = "YENİLE";
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Linen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.button4.Location = new System.Drawing.Point(672, 154);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 32);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "ARA";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Ivory;
-            this.textBox5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.textBox5.Location = new System.Drawing.Point(456, 154);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(210, 32);
-            this.textBox5.TabIndex = 40;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Bisque;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(428, 211);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(478, 247);
-            this.dataGridView1.TabIndex = 39;
+            this.RandevuDGV.BackgroundColor = System.Drawing.Color.Bisque;
+            this.RandevuDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RandevuDGV.Location = new System.Drawing.Point(428, 211);
+            this.RandevuDGV.Name = "RandevuDGV";
+            this.RandevuDGV.Size = new System.Drawing.Size(478, 247);
+            this.RandevuDGV.TabIndex = 39;
+            this.RandevuDGV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RandevuDGV_CellClick);
             // 
             // label6
             // 
@@ -111,19 +78,19 @@ namespace Eczane
             this.label6.TabIndex = 30;
             this.label6.Text = "SAAT :";
             // 
-            // dateTimePicker1
+            // Rtarih
             // 
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Ivory;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.Color.Ivory;
-            this.dateTimePicker1.CalendarTrailingForeColor = System.Drawing.Color.Ivory;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 255);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(210, 26);
-            this.dateTimePicker1.TabIndex = 29;
+            this.Rtarih.CalendarMonthBackground = System.Drawing.Color.Ivory;
+            this.Rtarih.CalendarTitleBackColor = System.Drawing.Color.Ivory;
+            this.Rtarih.CalendarTrailingForeColor = System.Drawing.Color.Ivory;
+            this.Rtarih.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Rtarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Rtarih.Location = new System.Drawing.Point(169, 255);
+            this.Rtarih.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
+            this.Rtarih.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.Rtarih.Name = "Rtarih";
+            this.Rtarih.Size = new System.Drawing.Size(210, 26);
+            this.Rtarih.TabIndex = 29;
             // 
             // label5
             // 
@@ -150,14 +117,84 @@ namespace Eczane
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button7);
+            this.panel2.Controls.Add(this.button8);
+            this.panel2.Controls.Add(this.button9);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(931, 94);
             this.panel2.TabIndex = 43;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.Location = new System.Drawing.Point(107, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 24);
+            this.label8.TabIndex = 94;
+            this.label8.Text = "<<<";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.SaddleBrown;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(361, 27);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 40);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "RANDEVU";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.BurlyWood;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button7.Location = new System.Drawing.Point(726, 27);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(119, 40);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "REÇETE";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.BurlyWood;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button8.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button8.Location = new System.Drawing.Point(544, 27);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(123, 40);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "TEDAVİ";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.BurlyWood;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button9.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.button9.Location = new System.Drawing.Point(177, 27);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(125, 40);
+            this.button9.TabIndex = 6;
+            this.button9.Text = "HASTA";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // label1
             // 
@@ -170,18 +207,7 @@ namespace Eczane
             this.label1.Size = new System.Drawing.Size(27, 28);
             this.label1.TabIndex = 5;
             this.label1.Text = "X";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label4.Location = new System.Drawing.Point(281, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(406, 35);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "     KONYA DENTAL KLİNİK     ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox2
             // 
@@ -189,46 +215,54 @@ namespace Eczane
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(12, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(96, 91);
+            this.pictureBox2.Size = new System.Drawing.Size(71, 91);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // comboBox2
+            // label4
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.Ivory;
-            this.comboBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.label4.Location = new System.Drawing.Point(260, 97);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(406, 35);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "     KONYA DENTAL KLİNİK     ";
+            // 
+            // RadCb
+            // 
+            this.RadCb.BackColor = System.Drawing.Color.Ivory;
+            this.RadCb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RadCb.FormattingEnabled = true;
+            this.RadCb.Items.AddRange(new object[] {
             "KADIN",
             "ERKEK"});
-            this.comboBox2.Location = new System.Drawing.Point(169, 211);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(210, 27);
-            this.comboBox2.TabIndex = 44;
+            this.RadCb.Location = new System.Drawing.Point(169, 211);
+            this.RadCb.Name = "RadCb";
+            this.RadCb.Size = new System.Drawing.Size(210, 27);
+            this.RadCb.TabIndex = 44;
+            this.RadCb.SelectedIndexChanged += new System.EventHandler(this.RadCb_SelectedIndexChanged);
             // 
-            // comboBox1
+            // RtedaviCb
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Ivory;
-            this.comboBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "İmplant",
-            "Diş çürüğü",
+            this.RtedaviCb.BackColor = System.Drawing.Color.Ivory;
+            this.RtedaviCb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RtedaviCb.FormattingEnabled = true;
+            this.RtedaviCb.Items.AddRange(new object[] {
+            "Dis Cürügü",
+            "Dis eti hastaliklari",
+            "Kanal Tedavi",
             "Dolgu",
-            "Kanal tedavisi",
-            "Diş kaplama",
-            "Diş eti hastalıkları",
-            "Ağız, diş ve çene cerrahisi",
-            "Diş beyazlatma",
-            "Ortodonti",
-            "Diş protezi",
-            "Röntgen ve görüntüleme",
-            "Estetik diş hekimliği uygulamaları"});
-            this.comboBox1.Location = new System.Drawing.Point(169, 342);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(210, 27);
-            this.comboBox1.TabIndex = 47;
+            "Cene Cerrahi",
+            "Dis Temizlik",
+            "İmp"});
+            this.RtedaviCb.Location = new System.Drawing.Point(169, 342);
+            this.RtedaviCb.Name = "RtedaviCb";
+            this.RtedaviCb.Size = new System.Drawing.Size(210, 27);
+            this.RtedaviCb.TabIndex = 47;
             // 
             // label3
             // 
@@ -253,6 +287,7 @@ namespace Eczane
             this.button3.TabIndex = 50;
             this.button3.Text = "KAYDET";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -266,6 +301,7 @@ namespace Eczane
             this.button2.TabIndex = 49;
             this.button2.Text = "GÜNCELLE";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -279,50 +315,65 @@ namespace Eczane
             this.button1.TabIndex = 48;
             this.button1.Text = "SİL";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox3
+            // SaatCb
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.Ivory;
-            this.comboBox3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.SaatCb.BackColor = System.Drawing.Color.Ivory;
+            this.SaatCb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.SaatCb.FormattingEnabled = true;
+            this.SaatCb.Items.AddRange(new object[] {
             "09:00 - 10:00",
             "10:30 - 11:30",
             "12:00 - 13:00",
             "13:30 - 14:30",
             "15:00 - 16:00"});
-            this.comboBox3.Location = new System.Drawing.Point(169, 298);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(210, 27);
-            this.comboBox3.TabIndex = 51;
+            this.SaatCb.Location = new System.Drawing.Point(169, 298);
+            this.SaatCb.Name = "SaatCb";
+            this.SaatCb.Size = new System.Drawing.Size(210, 27);
+            this.SaatCb.TabIndex = 51;
+            // 
+            // AraaTb
+            // 
+            this.AraaTb.BackColor = System.Drawing.Color.Ivory;
+            this.AraaTb.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.AraaTb.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.AraaTb.Location = new System.Drawing.Point(522, 173);
+            this.AraaTb.Multiline = true;
+            this.AraaTb.Name = "AraaTb";
+            this.AraaTb.Size = new System.Drawing.Size(291, 32);
+            this.AraaTb.TabIndex = 52;
+            this.AraaTb.TextChanged += new System.EventHandler(this.AraaTb_TextChanged);
             // 
             // Randevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(931, 604);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.AraaTb);
+            this.Controls.Add(this.SaatCb);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.RtedaviCb);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.RadCb);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.RandevuDGV);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Rtarih);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Randevu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Randevu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Randevu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.RandevuDGV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -332,25 +383,27 @@ namespace Eczane
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView RandevuDGV;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker Rtarih;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox RadCb;
+        private System.Windows.Forms.ComboBox RtedaviCb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox SaatCb;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox AraaTb;
     }
 }

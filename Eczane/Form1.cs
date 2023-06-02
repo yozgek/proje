@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+
 
 namespace Eczane
 {
@@ -39,6 +35,67 @@ namespace Eczane
 
         private void label4_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+        }
+                SqlConnection baglanti = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\ismet\OneDrive\Belgeler\dentaldb.mdf;Integrated Security = True; Connect Timeout = 30");
+
+
+        public void button1_Click(object sender, EventArgs e)
+
+
+
+        {
+        try
+            {
+                baglanti.Open();
+                string sql = "Select * From KGirisTbl where KAd = @KAd AND Sifre = @Sifre ";
+                SqlParameter prm1 = new SqlParameter("KAd", GADTb.Text.Trim());
+                SqlParameter prm2 = new SqlParameter("Sifre", GSTb.Text.Trim());
+                SqlCommand komut = new SqlCommand(sql, baglanti);
+                komut.Parameters.Add(prm1);
+                komut.Parameters.Add(prm2);
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(komut);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    Anasayfa fre = new Anasayfa();
+                    fre.ShowDialog();
+                }
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("hatalı giriş");
+            }
+        }
+
+        private void kayıt_Click(object sender, EventArgs e)
+        {
+            Form2 frm1 = new Form2();
+            frm1.ShowDialog();
+        }
+        public static string KayıtAdTb;
+        public static string KayıtParolaTb;
+
+
+
+
+        private void Form1_Activated(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
 
         }
     }
